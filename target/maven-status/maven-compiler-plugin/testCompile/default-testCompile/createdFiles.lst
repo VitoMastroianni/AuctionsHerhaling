@@ -1,0 +1,12 @@
+be\pxl\auctions\model\auction\AuctionIsFinishedTest.class
+be\pxl\auctions\dao\impl\UserDaoImplTest.class
+be\pxl\auctions\model\UserGetAgeTest.class
+be\pxl\auctions\service\UserServiceCreateUserTest.class
+be\pxl\auctions\service\AuctionServiceCreateAuctionTest.class
+be\pxl\auctions\service\UserServiceGetUserByIdTest.class
+be\pxl\auctions\dao\impl\AuctionDaoImplTest.class
+be\pxl\auctions\service\AuctionServiceDoBidTest.class
+be\pxl\auctions\util\EmailValidatorIsValidTest.class
+be\pxl\auctions\dao\impl\util\DaoTest.class
+be\pxl\auctions\model\auction\AuctionFindHighestBidTest.class
+be\pxl\auctions\builders\BidBuilder.class
