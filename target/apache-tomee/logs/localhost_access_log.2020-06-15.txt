@@ -1,6 +1,0 @@
-0:0:0:0:0:0:0:1 - - [15/Jun/2020:18:18:35 +0200] "POST /auctions/rest/auctions/1/bids HTTP/1.1" 400 32
-0:0:0:0:0:0:0:1 - - [15/Jun/2020:18:19:22 +0200] "POST /auctions/rest/auctions/1/bids HTTP/1.1" 400 32
-0:0:0:0:0:0:0:1 - - [15/Jun/2020:18:21:49 +0200] "POST /auctions/rest/auctions/1/bids HTTP/1.1" 400 32
-0:0:0:0:0:0:0:1 - - [15/Jun/2020:18:21:52 +0200] "POST /auctions/rest/users HTTP/1.1" 400 47
-0:0:0:0:0:0:0:1 - - [15/Jun/2020:18:24:12 +0200] "POST /auctions/rest/users HTTP/1.1" 201 -
-0:0:0:0:0:0:0:1 - - [15/Jun/2020:18:24:22 +0200] "POST /auctions/rest/auctions/1/bids HTTP/1.1" 400 33

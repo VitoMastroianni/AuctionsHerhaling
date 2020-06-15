@@ -22,3 +22,4 @@ be\pxl\auctions\model\Auction.class
 be\pxl\auctions\rest\resource\UserCreateResource.class
 be\pxl\auctions\rest\AuctionRest.class
 be\pxl\auctions\rest\resource\AuctionCreateResource.class
+be\pxl\auctions\servlets\ActiveAuctionServlet.class

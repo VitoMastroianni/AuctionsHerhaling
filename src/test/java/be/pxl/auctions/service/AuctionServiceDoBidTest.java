@@ -25,9 +25,6 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
 public class AuctionServiceDoBidTest {
-
-
-
     // TODO add unit tests for all possible scenario's of the createUser method
     @Mock
     private UserDao userDao;
