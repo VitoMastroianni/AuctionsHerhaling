@@ -5,6 +5,7 @@ import be.pxl.auctions.dao.impl.AuctionDaoImpl;
 import be.pxl.auctions.util.EntityManagerUtil;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,20 +16,28 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "ActiveAuctionServlet", value = "/rest/count")
 public class ActiveAuctionServlet extends HttpServlet {
-
+    private EntityManager entityManager;
     private AuctionDao auctionDao;
-    private int activeAuctions;
 
     @Override
     public void init() throws ServletException {
         super.init();
-        EntityManager entityManager = EntityManagerUtil.createEntityManager();
+        EntityManagerFactory entityManagerFactory = (EntityManagerFactory) getServletContext().getAttribute("entityManagerFactory");
+        entityManager = EntityManagerUtil.createEntityManager();
         auctionDao = new AuctionDaoImpl(entityManager);
     }
 
     @Override
+    public void destroy() {
+        super.destroy();
+        if (entityManager != null) {
+            entityManager.close();
+        }
+    }
+
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        activeAuctions = auctionDao.findAllAuctions().size();
+        int activeAuctions = auctionDao.findAllAuctions().size();
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         if (activeAuctions == 1){

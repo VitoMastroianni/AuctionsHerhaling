@@ -41,12 +41,16 @@ public class AuctionService {
             if (auction == null){
                 throw new InvalidBidException("Auction does not exist.");
             }
-            if(bidCreateResource.getPrice() < auction.findHighestBid().getAmount()){
-                throw new InvalidBidException("The current highest bid is: " + auction.findHighestBid().getAmount());
+
+            if (auction.getBids().size() > 0){
+                if(bidCreateResource.getPrice() < auction.findHighestBid().getAmount()){
+                    throw new InvalidBidException("The current highest bid is: " + auction.findHighestBid().getAmount());
+                }
+                if(auction.findHighestBid().getUser() == user){
+                    throw new InvalidBidException("User already has the highest bid");
+                }
             }
-            if(auction.findHighestBid().getUser() == user){
-                throw new InvalidBidException("User already has the highest bid");
-            }
+
             if(auction.isFinished()){
                 throw new InvalidBidException("Auction has been finished");
             }

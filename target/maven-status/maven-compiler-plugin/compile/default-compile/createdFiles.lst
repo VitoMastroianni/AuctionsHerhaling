@@ -7,6 +7,7 @@ be\pxl\auctions\dao\AuctionDao.class
 be\pxl\auctions\util\EmailValidator.class
 be\pxl\auctions\util\exception\InvalidDateException.class
 be\pxl\auctions\service\AuctionService.class
+be\pxl\auctions\util\AuctionListener.class
 be\pxl\auctions\util\EntityManagerUtil.class
 be\pxl\auctions\dao\UserDao.class
 be\pxl\auctions\util\exception\DuplicateEmailException.class
